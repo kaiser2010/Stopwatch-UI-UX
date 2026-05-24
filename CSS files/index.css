@@ -1,65 +1,136 @@
 /* style 1 */
 
 body {
+  margin: 0;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   background-color: hsl(0, 0%, 90%);
+  box-sizing: border-box;
 }
 
 #myh1 {
   font-size: 4rem;
   font-family: Arial, Helvetica, sans-serif;
   color: hsl(0, 0%, 25%);
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 #container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
+  padding: 40px;
   border: 5px solid;
   border-radius: 50px;
   background-color: #fff;
+  width: 95%;
+  max-width: 800px;
+  box-sizing: border-box;
+  overflow: visible;
 }
 
-#display{
-    font-size: 5rem;
+#display {
+    font-size: min(5rem, 15vw);
     font-family: monospace;
     font-weight: bold;
-    color: hsl(0 , 0% , 30%);
-    text-shadow: 2px 2px 2px hsl(0 , 0% , 0.75);
+    color: hsl(0, 0%, 30%);
+    text-shadow: 2px 2px 2px hsl(0, 0%, 75%);
     margin-bottom: 25px;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: visible;
+    box-sizing: border-box;
 }
 
-#controls button{
+#controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#controls button {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px 20px;
-    margin: 5px;
     min-width: 125px;
     border-radius: 10px;
     cursor: pointer;
     color: #fff;
-    border: #fff;
-    transition: background-color 0.5s ease;
+    border: none;
+    transition: background-color 0.5s ease, transform 0.2s ease;
 }
 
-#Startbtn{
+#controls button:active {
+    transform: scale(0.95);
+}
+
+#Startbtn {
     background-color: hsl(115, 100%, 40%);
-
 }
-#Startbtn:hover{
+#Startbtn:hover {
     background-color: hsl(115, 100%, 30%);
 }
-#stoptbtn{
+#stoptbtn {
     background-color: hsl(10, 90%, 50%);
 }
-#stoptbtn:hover{
-    background-color: hsl(1, 90%, 40%);}
-#resetbtn{
+#stoptbtn:hover {
+    background-color: hsl(1, 90%, 40%);
+}
+#resetbtn {
     background-color: hsl(205, 90%, 60%);
 }
-#resetbtn:hover{
+#resetbtn:hover {
     background-color: hsl(205, 90%, 50%);
+}
+
+/* Tablet Layout (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    #myh1 {
+        font-size: 3rem;
+    }
+    #display {
+        font-size: 4rem;
+    }
+    #controls button {
+        font-size: 1.2rem;
+        min-width: 110px;
+    }
+}
+
+/* Mobile Phones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    #container {
+        padding: 15px;
+        border-radius: 25px;
+    }
+    #myh1 {
+        font-size: 1.8rem;
+    }
+    #display {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    #controls {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+    }
+    #controls button {
+        font-size: 0.9rem;
+        min-width: 80px;
+        width: 100%;
+        max-width: 200px;
+    }
 }
