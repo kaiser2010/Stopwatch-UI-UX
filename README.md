@@ -8,7 +8,7 @@ A sleek, modern, and high-performance digital stopwatch featuring a stunning neo
 
 ## 🔗 Live Demo
 
-[![Live Demo](https://img.shields.io/badge/View_Live_Demo-00f2ff?style=for-the-badge&logo=google-chrome&logoColor=black)](https://kaiser2010.github.io/Stopwatch-UI-UX/)
+**[🚀 View Live Demo](https://kaiser2010.github.io/Stopwatch-UI-UX/)**
 
 ## ✨ Features
 
